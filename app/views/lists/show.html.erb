@@ -1,0 +1,10 @@
+<div class="container">
+  <h1><%= @list.name  %></h1>
+   <img src="<%= @list.image %>" alt="List Image" width = 400px>
+  <br>
+  <p><%= link_to "+Add a Bookmark", new_list_bookmark_path(@list) %></p>
+  <br>
+  <p><%= link_to "Back to all Lists", lists_path %></p>
+</div>
+
+<!-- Display movie's comments -->
