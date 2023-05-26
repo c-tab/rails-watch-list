@@ -1,10 +1,19 @@
 <div class="container">
   <h1><%= @list.name  %></h1>
-   <img src="<%= @list.image %>" alt="List Image" width = 400px>
-  <br>
-  <p><%= link_to "+Add a Bookmark", new_list_bookmark_path(@list) %></p>
-  <br>
-  <p><%= link_to "Back to all Lists", lists_path %></p>
+  <div class="card">
+    <div clas="imageshow">
+    <img src="<%= @list.image %>" alt="List Image" width = 400px>
+    </div>
+    <div class="text">
+      <% @list.bookmarks.each do |bookmark| %>
+      <p>-<%= bookmark.movie.title %>: <%= bookmark.comment %><p>
+      <% end %>
+    </div>
+  </div>
+  <div class="d-flex">
+    <br>
+    <p class = "btns" style="margin:5px"><%= link_to "+Add a Bookmark", new_list_bookmark_path(@list) %></p>
+    <br>
+    <p class = "btns" style="margin:5px"><%= link_to "Back to all Lists", lists_path %></p>
+  </div>
 </div>
-
-<!-- Display movie's comments -->

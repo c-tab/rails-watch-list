@@ -1,12 +1,16 @@
 <div class="container">
-<h1 style="text-align: center">All the Lists</h1>
-<% @lists.each do |list| %>
-<h3><%= link_to list.name, list_path(list) %></h3>
-<img src=<%=list.image%> alt="Image" width=200px>
-<% end %>
-<br>
-<br>
-  <h3><%= link_to "+Add a List", new_list_path %></h3>
-<br>
-<%= link_to "Back", root_path %>
+
+  <h1 style="text-align: center">All the Lists</h1>
+  <% @lists.each do |list| %>
+  <h3><%= link_to list.name, list_path(list) %></h3>
+  <img src=<%=list.image%> alt="Image" width=200px>
+  <% end %>
+
+  <br>
+  <br>
+  <div class="d-flex">
+      <p class = "btns" style="margin:5px"><%= link_to "+Add a List", new_list_path %></p>
+    <br>
+      <p class = "btns" style="margin:5px"><%= link_to "Back", root_path %></p>
+  </div>
 </div>

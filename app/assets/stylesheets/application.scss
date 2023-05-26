@@ -26,3 +26,31 @@
   height: 1000px;
   color: white;
 }
+
+.card{
+  border-radius: 1%;
+  background-color: lightgoldenrodyellow;
+  padding: 20px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5px;
+  margin: auto;
+}
+
+.btns{
+  background-color: goldenrod;
+  border-radius: 2%;
+  padding: 5px;
+  width: max-content;
+  font-size: larger;
+
+  a{
+    color: navy;
+    text-decoration: none;
+  }
+}
+
+.imageshow{
+  margin: auto;
+}
